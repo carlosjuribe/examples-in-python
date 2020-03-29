@@ -7,7 +7,8 @@ from spam_trainer import SpamTrainer
 
 class TestSpamTrainer(unittest.TestCase):
   def setUp(self):
-    self.training = [['spam', './tests/fixtures/plain.eml'], ['ham', './tests/fixtures/small.eml'],
+    self.training = [['spam', './tests/fixtures/plain.eml'], 
+                     ['ham', './tests/fixtures/small.eml'],
                      ['scram', './tests/fixtures/plain.eml']]
     self.trainer = SpamTrainer(self.training)
     with io.open('./tests/fixtures/plain.eml', 'rb') as eml_file:
